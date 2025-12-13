@@ -1,1 +1,1 @@
-This repository contains exercises, notes, and examples that cover the fundamentals of Linux shell scripting and command-line operations. It is intended for beginners learning how the shell works and how to automate tasks using scripts.
+This repository contains exercises, notes, and examples that cover the fundamentals of Linux shell scripting and command-line operations. this will work and how to automate tasks using scripts.
