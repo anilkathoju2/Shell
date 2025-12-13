@@ -5,15 +5,18 @@
 #Date : 09-Dec-2025                                             
 #Version: V.1.0                                      
 #########################################################################################################################
+
 echo "=============================="
 echo "Listing S3 Buckets"
 echo "=============================="
 aws s3 ls
 
 echo "=============================="
-echo "Listing EC2 Instance IDs"
+echo "Listing EC2 Instance Names"
 echo "=============================="
-aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId'
+aws ec2 describe-instances \
+  --query "Reservations[*].Instances[*].Tags[?Key=='Name'].Value | []" \
+  --output text
 
 echo "=============================="
 echo "Listing Lambda Functions"
